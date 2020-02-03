@@ -10,7 +10,7 @@ fd = open("image.ppm", 'w')
 for column in range(0, width):
     for row in range(0, height):
         index = (height * row + column) * 3
-        pixels[index + 1] = row
+        pixels[index + 1] = 0
         pixels[index + 2] = column
 fd.write(header)
 for pixel in pixels:
